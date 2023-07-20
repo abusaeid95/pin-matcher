@@ -6,7 +6,6 @@ function pinGenerator(){
         generatorDisplay.value = printstring;
     }
 }
-pinGenerator();
 function numaric (event) {
     const displayNumber = document.getElementById('number-display');
     const eachvalue = event.target.innerText;
@@ -33,8 +32,12 @@ function matcher(){
     const typedPinString = document.getElementById('number-display');
     const firstModal = new bootstrap.Modal(document.getElementById('modall-1'));
     const secondModal = new bootstrap.Modal(document.getElementById('modall-2'));
+    const thirdModal = new bootstrap.Modal(document.getElementById('modall-3'));
     if(generatedPin.value == typedPinString.value & generatedPin.value > 100){
             firstModal.show();
+    }
+    else if(generatedPin.value == '' & typedPinString.value == '') {
+        thirdModal.show();
     }
     else{
         secondModal.show();
