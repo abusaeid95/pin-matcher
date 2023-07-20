@@ -30,12 +30,10 @@ function numaric (event) {
 
 function matcher(){
     const generatedPin = document.getElementById('generator-display');
-    const generatedPinConcate= generatedPin + ''
     const typedPinString = document.getElementById('number-display');
-    const typedPin = typedPinString + ''
     const firstModal = new bootstrap.Modal(document.getElementById('modall-1'));
     const secondModal = new bootstrap.Modal(document.getElementById('modall-2'));
-    if(generatedPin.value == typedPinString.value){
+    if(generatedPin.value == typedPinString.value & generatedPin.value > 100){
             firstModal.show();
     }
     else{
