@@ -35,6 +35,8 @@ function matcher(){
     const thirdModal = new bootstrap.Modal(document.getElementById('modall-3'));
     if(generatedPin.value == typedPinString.value & generatedPin.value > 100){
             firstModal.show();
+            typedPinString.value = '';
+            generatedPin.value = '';
     }
     else if(generatedPin.value == '' & typedPinString.value == '') {
         thirdModal.show();
